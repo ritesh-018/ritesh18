@@ -1,0 +1,292 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #e5e2dd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 850px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Navigation Bar */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.top-bar nav a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 10px;
+    font-weight: 400;
+}
+
+.top-bar nav a:hover {
+    color: #0077ff;
+}
+
+/* Main Title */
+.main-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.main-title span {
+    color: #0077ff;
+}
+
+/* Circular Centerpiece */
+.circle-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.menu-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 5px; /* Space between circle and text */
+}
+
+.small-circle {
+    background: #0369f0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s;
+}
+
+.menu-link:hover .small-circle {
+    background: white;
+    color: #0369f0;
+}
+
+.menu-link p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu-link:hover p {
+    color: #ff4081;
+}
+
+
+.circle {
+    width: 180px;
+    height: 180px;
+    background: white;
+    border: 8px solid #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 50%;
+}
+
+/* Subtext */
+.subtext {
+    font-size: 18px;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Roadmap Section */
+.roadmap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 10px;
+}
+
+/* Roadmap Items */
+.roadmap-item {
+    text-align: center;
+}
+
+/* Small Circles */
+.small-circle {
+    width: 80px;
+    height: 80px;
+    background: #0077ff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 700;
+    border-radius: 50%;
+}
+
+/* Globe Icon */
+.globe img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Roadmap Text */
+.roadmap-text h2 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.roadmap-text p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Button */
+button {
+    background: #0077ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0055cc;
+}
+
+
+/* Gooey Effect */
+svg {
+    display: none;
+}
+
+.menu {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: url(#goo);
+}
+
+/* Menu Container */
+.menu-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Button */
+.menu-open-button {
+    background: #0369f0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Button Animation */
+.menu-open-button:active {
+    transform: scale(1.1);
+}
+
+/* Menu Items */
+.menu-item {
+    background: #0369f0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.320, 1.275), opacity 0.2s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Menu Open - Active State */
+.menu-container.active .menu-item {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Positions for Circular Layout */
+.menu-container.active .menu-item:nth-child(2) { transform: translateY(-100px); }
+.menu-container.active .menu-item:nth-child(3) { transform: translate(-70px, -70px); }
+.menu-container.active .menu-item:nth-child(4) { transform: translate(70px, -70px); }
+.menu-container.active .menu-item:nth-child(5) { transform: translateX(-100px); }
+.menu-container.active .menu-item:nth-child(6) { transform: translateX(100px); }
+
+
+@media (max-width: 768px) {
+    .roadmap {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .roadmap-item {
+        margin-bottom: 15px;
+    }
+}
